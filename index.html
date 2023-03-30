@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Python Library</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<img src="images/logo.png" width="20%" height="auto" alt="Python Library">
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="AboutUs.html">About us</a>
+			<a href="https://fairpy.readthedocs.io/en/dev/">Docs</a>
+			<a href="https://github.com/brandeis-machine-learning/FairPy/tree/dev"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo"></a>
+		</nav>
+	</header>
+	<div class="placeholder"></div>
+	<section class="description">
+		<h1 class="bigtitle">Learn More About FairPy</h1>
+		<h2>What is Python Library?</h2>
+		<p>FairPy is a comprehensive Python Library for Machine Learning Fairness, covering various fairness notions, data structures, and learning tasks. FairPy is a good toolkit for mitigating bias and helping to deliver equitable outcomes from machine learning models.</p>
+		<p>FairPy includes many latest fairness algorithms, such as LabelBias<a href="https://fairpy.readthedocs.io/en/dev/reference.html#id3">[JN20]</a> and FairGLM<a href="https://fairpy.readthedocs.io/en/dev/reference.html#id8">[DPM+22]</a>. For consistency and accessibility, FairPy is developed on top of <a href="https://scikit-learn.org/stable/">scikit-learn</a> and <a href="https://pytorch.org/">PyTorch</a>.</p>
+		<h2>Sample Code of FairPy</h2>
+		<p>Getting started with FairPy is simple. You can begin by installing the library, following the tutorial, and experimenting with the sample code provided in the documentation. This will help you understand the basic concepts and learn how to use FairPy effectively in your projects.</p>
+		<pre><code>
+from fairpy.dataset import Adult
+from fairpy.model import LabelBias
+
+dataset = Adult()                  # Choose or customize a dataset
+split_data = dataset.split()       # Extract features, labels, and sensitive attributes from the dataset
+model = LabelBias()                # Choose a fairness algorithm
+model.fit(split_data.X_train, split_data.y_train, split_data.s_train)  # Fit model with provided data
+model.predict(split_data.X_test)   # Predict
+		</code></pre>
+		<h2>Why FairPy: Compare to Other Libraries</h2>
+		<p>FairPy aims to provide a comprehensive and unified library for machine learning fairness. It stands out from other libraries by offering a wide range of fairness algorithms, data structures, and learning tasks to cater to the needs of researchers and practitioners in the field.</p>
+        <div class="table-container">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Attribute</th>
+                    <th>FairPy</th>
+                    <th>Fairlearn</th>
+                    <th>AI Fairness 360</th>
+                    <th>inFairness</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Group Fairness</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                    <td>[ ]</td>
+                  </tr>
+                  <tr>
+                    <td>Individual Fairness</td>
+                    <td>[x]</td>
+                    <td>[ ]</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                  </tr>
+                  <tr>
+                    <td>Minimax Fairness</td>
+                    <td>[x]</td>
+                    <td>[ ]</td>
+                    <td>[ ]</td>
+                    <td>[ ]</td>
+                  </tr>
+                  <tr>
+                    <td>Tabular Data</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                  </tr>
+                  <tr>
+                    <td>Graph Data</td>
+                    <td>[x]</td>
+                    <td>[ ]</td>
+                    <td>[ ]</td>
+                    <td>[ ]</td>
+                  </tr>
+                  <tr>
+                    <td>Classification</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                  </tr>
+                  <tr>
+                    <td>Regression</td>
+                    <td>[x]</td>
+                    <td>[ ]</td>
+                    <td>[x]</td>
+                    <td>[ ]</td>
+                  </tr>
+                  <tr>
+                    <td>Ranking</td>
+                    <td>[x]</td>
+                    <td>[ ]</td>
+                    <td>[ ]</td>
+                    <td>[ ]</td>
+                  </tr>
+                  <tr>
+                    <td>Number of Algorithms</td>
+                    <td>10+</td>
+                    <td>4</td>
+                    <td>14</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>Compatible with sklearn</td>
+                    <td>[x]</td>
+                    <td>[x]</td>
+                    <td>Partially</td>
+                    <td>[ ]</td>
+                  </tr>
+                  <tr>
+                    <td>Latest release</td>
+                    <td>March 2023</td>
+                    <td>July 2021</td>
+                    <td>March 2021</td>
+                    <td>June 2022</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+          <h2>Implemented Algorithms</h2>
+          <p>FairPy toolkit consists of three major functional groups:</p>
+          <h3>1.Fairness Algorithms</h3>
+          <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Name in FairPy</th>
+                        <th>Task</th>
+                        <th>Year</th>
+                        <th>Ref</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pre</td>
+                        <td>LabelBias</td>
+                        <td>Classification</td>
+                        <td>2020</td>
+                        <td>[JN20]</td>
+                    </tr>
+                    <tr>
+                        <td>Pre</td>
+                        <td>LinearFairERM</td>
+                        <td>Any</td>
+                        <td>2018</td>
+                        <td>[DOBD+18]</td>
+                    </tr>
+                    <tr>
+                        <td>Pre</td>
+                        <td>DIRemover</td>
+                        <td>Any</td>
+                        <td>2015</td>
+                        <td>[FFM+15]</td>
+                    </tr>
+                    <tr>
+                        <td>Pre</td>
+                        <td>IFair</td>
+                        <td>Any</td>
+                        <td>2019</td>
+                        <td>[LGW19]</td>
+                    </tr>
+                    <tr>
+                        <td>In</td>
+                        <td>FairCstr</td>
+                        <td>Classification</td>
+                        <td>2017</td>
+                        <td>[ZVRG17]</td>
+                    </tr>
+                    <tr>
+                        <td>In</td>
+                        <td>FairGLM</td>
+                        <td>Classification</td>
+                        <td>2022</td>
+                        <td>[DPM+22]</td>
+                    </tr>
+                    <tr>
+                        <td>In</td>
+                        <td>FairPGRank</td>
+                        <td>Ranking</td>
+                        <td>2019</td>
+                        <td>[SJ19]</td>
+                    </tr>
+                    <tr>
+                        <td>Post</td>
+                        <td>EqOddsCalib</td>
+                        <td>Classification</td>
+                        <td>2016</td>
+                        <td>[HPS16]</td>
+                    </tr>
+                    <tr>
+                        <td>Post</td>
+                        <td>FairRank</td>
+                        <td>Ranking</td>
+                        <td>2017</td>
+                        <td>[ZBC+17]</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+          <h3>2.Datasets</h3>
+
+          <div class="table-container">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name in FairPy</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Table</td>
+                    <td>Adult</td>
+                  </tr>
+                  <tr>
+                    <td>Table</td>
+                    <td>Bank</td>
+                  </tr>
+                  <tr>
+                    <td>Table</td>
+                    <td>Compas</td>
+                  </tr>
+                  <tr>
+                    <td>Table</td>
+                    <td>Credit</td>
+                  </tr>
+                  <tr>
+                    <td>Table</td>
+                    <td>Dutch</td>
+                  </tr>
+                  <tr>
+                    <td>Table</td>
+                    <td>German</td>
+                  </tr>
+                  <tr>
+                    <td>Table</td>
+                    <td>Oulad</td>
+                  </tr>
+                  <tr>
+                    <td>Table</td>
+                    <td>Xing</td>
+                  </tr>
+                </tbody>
+              </table>  
+          </div>
+
+          <h3>3.Metrics</h3>  
+          <div class="table-container">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name in FairPy</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Classification</td>
+                    <td>binary_dp</td>
+                  </tr>
+                  <tr>
+                    <td>Classification</td>
+                    <td>binary_eop</td>
+                  </tr>
+                  <tr>
+                    <td>Ranking</td>
+                    <td>xAUC</td>
+                  </tr>
+                  <tr>
+                    <td>Ranking</td>
+                    <td>dcg</td>
+                  </tr>
+                </tbody>
+              </table>   
+          </div>
+	</section>
+	
+	<footer>
+		<nav class="footer-nav">
+			<a href="AboutUs.html">about us</a>
+			<a href="https://fairpy.readthedocs.io/en/dev/">docs</a>
+			<a href="https://github.com/brandeis-machine-learning/FairPy/tree/dev"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo"></a>
+		</nav>
+		<p class="footer-text">© 2023 Python Library. All Rights Reserved.</p>
+	</footer>
+</body>
+</html>
