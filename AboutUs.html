@@ -1,469 +1,328 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About Us</title>
+	<title>Python Library</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: 'Roboto', Arial, sans-serif;
-			line-height: 1.6;
-			background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjPvloNQgaM0frElTuwTwt-dLsj8HdZMVsb1odzZp0RfnlBdxBEjG2pJKemmGZMsZ9_0k&usqp=CAU");
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
-
-		header {
-			background-color: #fff;
-			color: #000;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 10px 20px;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			z-index: 999;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		}
-
-		h1 {
-			font-weight: 700;
-			font-size: 24px;
-		}
-
-		nav {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-grow: 1;
-			margin: 0 20px;
-		}
-
-		nav a {
-			color: #000;
-			text-decoration: none;
-			margin: 0 20px;
-			font-size: 18px;
-			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			transition: all 0.2s ease-in-out;
-		}
-
-		nav a:hover {
-			text-decoration: underline;
-			transform: scale(1.1);
-		}
-
-		nav img {
-			height: 30px;
-			margin-left: 10px;
-		}
-
-		.placeholder {
-			height: 70px;
-			width: 100%;
-			display: block;
-			background-color: #f2f2f2;
-		}
-
-		section {
-			padding: 50px;
-		}
-
-		h1, h2 {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #ff0066, rgb(6, 140, 217), #ff9933);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-        }
-          
-          
-
-		p {
-			font-size: 18px;
-			line-height: 1.5;
-		}
-
-		.description {
-			background-size: cover;
-			background-repeat: no-repeat;
-			padding: 50px;
-			color: #000000;
-			border-radius: 5px;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		}
-
-		footer {
-			background-color: #f5f5f5;
-			color: #999;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 20px;
-		}
-		
-		.footer-nav {
-			display: flex;
-			margin-bottom: 20px;
-		}
-		
-		.footer-nav a {
-			font-size: 14px;
-			margin-right: 20px;
-			text-decoration: none;
-			color: #999;
-			transition: all 0.2s ease-in-out;
-		}
-		
-		.footer-nav a:hover {
-			color: #666;
-			text-decoration: underline;
-		}
-		
-		.footer-text {
-			font-size: 12px;
-		}
-
-		pre {
-			background-color: #ffffff;
-			border-radius: 4px;
-			padding: 15px;
-			overflow-x: auto;
-		}
-		
-		code {
-			font-family: 'Courier New', monospace;
-		}
-
-        table {
-            border-collapse: collapse;
-            width: 88%;
-            background-color: #ffffff;
-        }
-          
-        td, th {
-            text-align: center;
-            padding: 10px;
-            border: 1.5px solid rgba(204, 204, 204, 0.758);
-        }
-
-        .table-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .bigtitle {
-            padding: 50px;
-            text-align: center;
-            font-size: 48px;
-            font-weight: bold;
-            margin: 0;
-            color: #000000;
-            font-family: 'Helvetica Neue', sans-serif;
-            background-size: 200% 100%;
-            background-position: left bottom;
-            animation: slide-in 1s ease-out;
-          }
-          
-          
-        @keyframes slide-in {
-            0% {
-              transform: translateY(-100%);
-            }
-            100% {
-              transform: translateY(0);
-            }
-        }
-
-        header img {
-			padding-bottom: 5px;
-		}
-		
-	</style>
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="prism.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Prism.highlightAll();
+        });
+    </script>
+</head> 
 <body>
-	<header>
-		<img src="images/logo.png" width="20%" height="auto" alt="Python Library">
-		<nav>
-			<a href="index.html">Home</a>
-			<a href="AboutUs.html">About us</a>
-			<a href="https://fairpy.readthedocs.io/en/dev/">Docs</a>
-			<a href="https://github.com/brandeis-machine-learning/FairPy/tree/main"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo"></a>
-		</nav>
-	</header>
-	<div class="placeholder"></div>
-	<section class="description">
-        <h1 class="bigtitle">About Us</h1>
-		<h2>Why FairPy: Compare to Other Libraries</h2>
-		<p>FairPy aims to provide a comprehensive and unified library for machine learning fairness. It stands out from other libraries by offering a wide range of fairness algorithms, data structures, and learning tasks to cater to the needs of researchers and practitioners in the field.</p>
+
+<header>
+
+
+  <div class="container">
+    <div class="logo-nav">
+        <div class="navbar-brand-wrapper">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" width="250px" height="auto" alt="Python Library">
+            </a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link navtext" href="AboutUs.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navtext" href="https://fairpy.readthedocs.io/en/dev/">Docs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navtext" href="https://github.com/brandeis-machine-learning/FairPy/tree/dev">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <button class="navbar-toggler navbar-toggler-custom" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+
+
+</header>
+<div class="placeholder"></div>
+<section class="description">
+      <h1 class="bigtitle">About Us</h1>
+  <h2>Why FairPy: Compare to Other Libraries</h2>
+  <p>FairPy aims to provide a comprehensive and unified library for machine learning fairness. It stands out from other libraries by offering a wide range of fairness algorithms, data structures, and learning tasks to cater to the needs of researchers and practitioners in the field.</p>
+      <div class="table-container">
+          <table>
+              <thead>
+                <tr>
+                  <th>Attribute</th>
+                  <th>FairPy</th>
+                  <th>Fairlearn</th>
+                  <th>AI Fairness 360</th>
+                  <th>inFairness</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Group Fairness</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                  <td>[ ]</td>
+                </tr>
+                <tr>
+                  <td>Individual Fairness</td>
+                  <td>[x]</td>
+                  <td>[ ]</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                </tr>
+                <tr>
+                  <td>Minimax Fairness</td>
+                  <td>[x]</td>
+                  <td>[ ]</td>
+                  <td>[ ]</td>
+                  <td>[ ]</td>
+                </tr>
+                <tr>
+                  <td>Tabular Data</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                </tr>
+                <tr>
+                  <td>Graph Data</td>
+                  <td>[x]</td>
+                  <td>[ ]</td>
+                  <td>[ ]</td>
+                  <td>[ ]</td>
+                </tr>
+                <tr>
+                  <td>Classification</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                </tr>
+                <tr>
+                  <td>Regression</td>
+                  <td>[x]</td>
+                  <td>[ ]</td>
+                  <td>[x]</td>
+                  <td>[ ]</td>
+                </tr>
+                <tr>
+                  <td>Ranking</td>
+                  <td>[x]</td>
+                  <td>[ ]</td>
+                  <td>[ ]</td>
+                  <td>[ ]</td>
+                </tr>
+                <tr>
+                  <td>Number of Algorithms</td>
+                  <td>10+</td>
+                  <td>4</td>
+                  <td>14</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Compatible with sklearn</td>
+                  <td>[x]</td>
+                  <td>[x]</td>
+                  <td>Partially</td>
+                  <td>[ ]</td>
+                </tr>
+                <tr>
+                  <td>Latest release</td>
+                  <td>March 2023</td>
+                  <td>July 2021</td>
+                  <td>March 2021</td>
+                  <td>June 2022</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+
+        <h2>Implemented Algorithms</h2>
+        <p>FairPy toolkit consists of three major functional groups:</p>
+        <h3>1.Fairness Algorithms</h3>
         <div class="table-container">
-            <table>
-                <thead>
+          <table>
+              <thead>
                   <tr>
-                    <th>Attribute</th>
-                    <th>FairPy</th>
-                    <th>Fairlearn</th>
-                    <th>AI Fairness 360</th>
-                    <th>inFairness</th>
+                      <th>Type</th>
+                      <th>Name in FairPy</th>
+                      <th>Task</th>
+                      <th>Year</th>
+                      <th>Ref</th>
                   </tr>
-                </thead>
-                <tbody>
+              </thead>
+              <tbody>
                   <tr>
-                    <td>Group Fairness</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
-                    <td>[ ]</td>
-                  </tr>
-                  <tr>
-                    <td>Individual Fairness</td>
-                    <td>[x]</td>
-                    <td>[ ]</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
+                      <td>Pre</td>
+                      <td>LabelBias</td>
+                      <td>Classification</td>
+                      <td>2020</td>
+                      <td>[JN20]</td>
                   </tr>
                   <tr>
-                    <td>Minimax Fairness</td>
-                    <td>[x]</td>
-                    <td>[ ]</td>
-                    <td>[ ]</td>
-                    <td>[ ]</td>
+                      <td>Pre</td>
+                      <td>LinearFairERM</td>
+                      <td>Any</td>
+                      <td>2018</td>
+                      <td>[DOBD+18]</td>
                   </tr>
                   <tr>
-                    <td>Tabular Data</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
+                      <td>Pre</td>
+                      <td>DIRemover</td>
+                      <td>Any</td>
+                      <td>2015</td>
+                      <td>[FFM+15]</td>
                   </tr>
                   <tr>
-                    <td>Graph Data</td>
-                    <td>[x]</td>
-                    <td>[ ]</td>
-                    <td>[ ]</td>
-                    <td>[ ]</td>
+                      <td>Pre</td>
+                      <td>IFair</td>
+                      <td>Any</td>
+                      <td>2019</td>
+                      <td>[LGW19]</td>
                   </tr>
                   <tr>
-                    <td>Classification</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
+                      <td>In</td>
+                      <td>FairCstr</td>
+                      <td>Classification</td>
+                      <td>2017</td>
+                      <td>[ZVRG17]</td>
                   </tr>
                   <tr>
-                    <td>Regression</td>
-                    <td>[x]</td>
-                    <td>[ ]</td>
-                    <td>[x]</td>
-                    <td>[ ]</td>
+                      <td>In</td>
+                      <td>FairGLM</td>
+                      <td>Classification</td>
+                      <td>2022</td>
+                      <td>[DPM+22]</td>
                   </tr>
                   <tr>
-                    <td>Ranking</td>
-                    <td>[x]</td>
-                    <td>[ ]</td>
-                    <td>[ ]</td>
-                    <td>[ ]</td>
+                      <td>In</td>
+                      <td>FairPGRank</td>
+                      <td>Ranking</td>
+                      <td>2019</td>
+                      <td>[SJ19]</td>
                   </tr>
                   <tr>
-                    <td>Number of Algorithms</td>
-                    <td>10+</td>
-                    <td>4</td>
-                    <td>14</td>
-                    <td>3</td>
+                      <td>Post</td>
+                      <td>EqOddsCalib</td>
+                      <td>Classification</td>
+                      <td>2016</td>
+                      <td>[HPS16]</td>
                   </tr>
                   <tr>
-                    <td>Compatible with sklearn</td>
-                    <td>[x]</td>
-                    <td>[x]</td>
-                    <td>Partially</td>
-                    <td>[ ]</td>
+                      <td>Post</td>
+                      <td>FairRank</td>
+                      <td>Ranking</td>
+                      <td>2017</td>
+                      <td>[ZBC+17]</td>
                   </tr>
-                  <tr>
-                    <td>Latest release</td>
-                    <td>March 2023</td>
-                    <td>July 2021</td>
-                    <td>March 2021</td>
-                    <td>June 2022</td>
-                  </tr>
-                </tbody>
-              </table>
+              </tbody>
+          </table>
+        </div>
+        <h3>2.Datasets</h3>
+
+        <div class="table-container">
+          <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Name in FairPy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Table</td>
+                  <td>Adult</td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>Bank</td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>Compas</td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>Credit</td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>Dutch</td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>German</td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>Oulad</td>
+                </tr>
+                <tr>
+                  <td>Table</td>
+                  <td>Xing</td>
+                </tr>
+              </tbody>
+            </table>  
         </div>
 
-          <h2>Implemented Algorithms</h2>
-          <p>FairPy toolkit consists of three major functional groups:</p>
-          <h3>1.Fairness Algorithms</h3>
-          <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Name in FairPy</th>
-                        <th>Task</th>
-                        <th>Year</th>
-                        <th>Ref</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Pre</td>
-                        <td>LabelBias</td>
-                        <td>Classification</td>
-                        <td>2020</td>
-                        <td>[JN20]</td>
-                    </tr>
-                    <tr>
-                        <td>Pre</td>
-                        <td>LinearFairERM</td>
-                        <td>Any</td>
-                        <td>2018</td>
-                        <td>[DOBD+18]</td>
-                    </tr>
-                    <tr>
-                        <td>Pre</td>
-                        <td>DIRemover</td>
-                        <td>Any</td>
-                        <td>2015</td>
-                        <td>[FFM+15]</td>
-                    </tr>
-                    <tr>
-                        <td>Pre</td>
-                        <td>IFair</td>
-                        <td>Any</td>
-                        <td>2019</td>
-                        <td>[LGW19]</td>
-                    </tr>
-                    <tr>
-                        <td>In</td>
-                        <td>FairCstr</td>
-                        <td>Classification</td>
-                        <td>2017</td>
-                        <td>[ZVRG17]</td>
-                    </tr>
-                    <tr>
-                        <td>In</td>
-                        <td>FairGLM</td>
-                        <td>Classification</td>
-                        <td>2022</td>
-                        <td>[DPM+22]</td>
-                    </tr>
-                    <tr>
-                        <td>In</td>
-                        <td>FairPGRank</td>
-                        <td>Ranking</td>
-                        <td>2019</td>
-                        <td>[SJ19]</td>
-                    </tr>
-                    <tr>
-                        <td>Post</td>
-                        <td>EqOddsCalib</td>
-                        <td>Classification</td>
-                        <td>2016</td>
-                        <td>[HPS16]</td>
-                    </tr>
-                    <tr>
-                        <td>Post</td>
-                        <td>FairRank</td>
-                        <td>Ranking</td>
-                        <td>2017</td>
-                        <td>[ZBC+17]</td>
-                    </tr>
-                </tbody>
-            </table>
-          </div>
-          <h3>2.Datasets</h3>
+        <h3>3.Metrics</h3>  
+        <div class="table-container">
+          <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Name in FairPy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Classification</td>
+                  <td>binary_dp</td>
+                </tr>
+                <tr>
+                  <td>Classification</td>
+                  <td>binary_eop</td>
+                </tr>
+                <tr>
+                  <td>Ranking</td>
+                  <td>xAUC</td>
+                </tr>
+                <tr>
+                  <td>Ranking</td>
+                  <td>dcg</td>
+                </tr>
+              </tbody>
+            </table>   
+        </div>
+</section>
 
-          <div class="table-container">
-            <table>
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name in FairPy</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Table</td>
-                    <td>Adult</td>
-                  </tr>
-                  <tr>
-                    <td>Table</td>
-                    <td>Bank</td>
-                  </tr>
-                  <tr>
-                    <td>Table</td>
-                    <td>Compas</td>
-                  </tr>
-                  <tr>
-                    <td>Table</td>
-                    <td>Credit</td>
-                  </tr>
-                  <tr>
-                    <td>Table</td>
-                    <td>Dutch</td>
-                  </tr>
-                  <tr>
-                    <td>Table</td>
-                    <td>German</td>
-                  </tr>
-                  <tr>
-                    <td>Table</td>
-                    <td>Oulad</td>
-                  </tr>
-                  <tr>
-                    <td>Table</td>
-                    <td>Xing</td>
-                  </tr>
-                </tbody>
-              </table>  
-          </div>
-
-          <h3>3.Metrics</h3>  
-          <div class="table-container">
-            <table>
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name in FairPy</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Classification</td>
-                    <td>binary_dp</td>
-                  </tr>
-                  <tr>
-                    <td>Classification</td>
-                    <td>binary_eop</td>
-                  </tr>
-                  <tr>
-                    <td>Ranking</td>
-                    <td>xAUC</td>
-                  </tr>
-                  <tr>
-                    <td>Ranking</td>
-                    <td>dcg</td>
-                  </tr>
-                </tbody>
-              </table>   
-          </div>
-	</section>
-	
+<footer>
+  <nav class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="AboutUs.html">About us</a>
+    <a href="https://fairpy.readthedocs.io/en/dev/">Docs</a>
+    <a href="https://github.com/brandeis-machine-learning/FairPy/tree/main"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo"></a>
+  </nav>
+  <p class="footer-text">© 2023 Python Library. All Rights Reserved.</p>
+</footer>
 	<footer>
 		<nav class="footer-nav">
-			<a href="index.html">Home</a>
-			<a href="AboutUs.html">About us</a>
-			<a href="https://fairpy.readthedocs.io/en/dev/">Docs</a>
-			<a href="https://github.com/brandeis-machine-learning/FairPy/tree/main"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo"></a>
+			<a href="AboutUs.html">about us</a>
+			<a href="https://fairpy.readthedocs.io/en/dev/">docs</a>
+			<a href="https://github.com/brandeis-machine-learning/FairPy/tree/dev"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub logo"></a>
 		</nav>
 		<p class="footer-text">© 2023 Python Library. All Rights Reserved.</p>
 	</footer>
